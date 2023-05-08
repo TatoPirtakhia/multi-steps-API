@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: multiSteps
+  description: multiSteps API
+  version: 0.1.9
+
+servers:
+  - url: http://localhost:3001/api
+    description: local server
+
+paths:
+  /data:
+    post:
+      tags:
+        - multiSteps
+      requestBody:
+        description: create multiSteps
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                phone:
+                  type: string
+                plan:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                    money:
+                      type: string
+                addOns:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      title:
+                        type: string
+                      money:
+                        type: string
+              example:
+                name: tato
+                email: tatopirtakhia@gmail.com
+                phone: '+995571031252'
+                plan:
+                  title: "arcade"
+                  money: '9'
+                addOns:
+                  - title: "Online_service"
+                    money: '1'
+      responses:
+        "200":
+          description: multiSteps created
