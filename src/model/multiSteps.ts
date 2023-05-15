@@ -5,9 +5,7 @@ const multiSteps = new Schema({
     type: Schema.Types.String,
     required: true,
   },
-  id: {
-    type: Schema.Types.Number,
-  },
+ 
   email: {
     type: Schema.Types.String,
     required: true,
