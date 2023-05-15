@@ -37,7 +37,7 @@ paths:
                     title:
                       type: string
                     money:
-                      type: string
+                      type: number
                 addOns:
                   type: array
                   items:
@@ -46,17 +46,17 @@ paths:
                       title:
                         type: string
                       money:
-                        type: string
+                        type: number
               example:
                 name: tato
                 email: tatopirtakhia@gmail.com
                 phone: '+995571031252'
                 plan:
                   title: "arcade"
-                  money: '9'
+                  money: 9
                 addOns:
                   - title: "Online_service"
-                    money: '1'
+                    money: 1
       responses:
         "200":
           description: multiSteps created

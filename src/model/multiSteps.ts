@@ -16,7 +16,7 @@ const multiSteps = new Schema({
   },
   plan: {
     title: {
-      type: Schema.Types.String,
+      type: Schema.Types.Number,
       required: true,
     },
     money: {
@@ -30,7 +30,7 @@ const multiSteps = new Schema({
         type: Schema.Types.String,
       },
       money: {
-        type: Schema.Types.String,
+        type: Schema.Types.Number,
       },
     },
   ],
