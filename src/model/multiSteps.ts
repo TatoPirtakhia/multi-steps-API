@@ -29,12 +29,10 @@ const multiSteps = new Schema({
   addOns: [
     {
       title: {
-        title: {
-          type: Schema.Types.String,
-        },
-        money: {
-          type: Schema.Types.String,
-        },
+        type: Schema.Types.String,
+      },
+      money: {
+        type: Schema.Types.String,
       },
     },
   ],

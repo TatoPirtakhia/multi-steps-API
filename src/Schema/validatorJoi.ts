@@ -23,11 +23,15 @@ const postNewData = async () => {
       Joi.alternatives().try(Joi.string(), Joi.number())
     ),
     addOns: Joi.array().items(
-        Joi.object({
-          title: Joi.string().required(),
-          money: Joi.string().required(),
-        })
-      ).min(1).required()
+      Joi.object({
+        title: Joi.string(),
+        money: Joi.alternatives().try(Joi.string(), Joi.number())
+      })
+    ).min(1).required().messages({
+      "array.base": "addOns should be an array",
+      "array.min": "addOns should contain at least 1 object",
+      "any.required": "addOns is required",
+    }),
   });
 };
 

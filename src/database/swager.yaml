@@ -5,8 +5,12 @@ info:
   version: 0.1.9
 
 servers:
+  - url: https://multi-9lzx.onrender.com/api
+    description: render server
   - url: http://localhost:3001/api
     description: local server
+  
+
 
 paths:
   /data:
