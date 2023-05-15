@@ -14,7 +14,7 @@ server.use(bodyParser.json())
 
 server.use(cors())
 
-server.use('/api',cors(),multiRouter)
+server.use('/api',multiRouter)
 server.use("/", ...swaggerMiddlewares)
 
-server.listen(process.env.PORT || 3001, () => console.log("Server is listening at http://localhost:3001"))
+server.listen(process.env.PORT || 3002, () => console.log("Server is listening at http://localhost:3002"))

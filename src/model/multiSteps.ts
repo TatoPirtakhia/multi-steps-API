@@ -16,11 +16,11 @@ const multiSteps = new Schema({
   },
   plan: {
     title: {
-      type: Schema.Types.Number,
+      type: Schema.Types.String,
       required: true,
     },
     money: {
-      type: Schema.Types.String,
+      type: Schema.Types.Number,
       required: true,
     },
   },
