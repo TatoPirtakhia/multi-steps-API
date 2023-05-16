@@ -5,7 +5,10 @@ const multiSteps = new Schema({
     type: Schema.Types.String,
     required: true,
   },
- 
+  id:{
+    type: Schema.Types.Number,
+    required: true,
+  },
   email: {
     type: Schema.Types.String,
     required: true,
@@ -28,11 +31,15 @@ const multiSteps = new Schema({
     {
       title: {
         type: Schema.Types.String,
+        required: true,
       },
       money: {
         type: Schema.Types.Number,
+        required: true,
       },
+      
     },
+    
   ],
 });
 

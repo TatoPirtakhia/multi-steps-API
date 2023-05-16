@@ -12,7 +12,7 @@ export const addNewSteps = async (req: Request, res: Response) => {
     return res.status(422).json(error.details);
   }
   const { name, email ,phone ,plan,addOns} = value;
-  console.log(addOns)
+
   const last = await MultiSteps.find().sort({ _id: -1 }).limit(1);
   let id = last.length > 0 ? last[0].id + 1 : 1;
   if (isNaN(id)) {
